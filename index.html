@@ -1,8 +1,23 @@
-<!DOCTYPE html>
 <html>
-   <body>
-    <script type="text/javascript" src="/index.js"></script>
+<head>
+    <script type="text/javascript">
+        function redirectToUrl() {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", "https://raw.githubusercontent.com/pingme998/testgh/main/link.txt", true);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4) {
+                    var url = rawFile.responseText;
+                    document.location = url;
+                }
+            }
 
-      <p>Web page loads after 5 seconds.</p>
-   </body>
+            rawFile.send();
+        }
+        redirectToUrl();
+    </script>
+</head>
+
+<body>
+    Redirecting!
+</body>
 </html>
