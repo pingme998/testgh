@@ -1,1 +1,1 @@
-window.location.replace('https://google.com');
+window.open('https://google.com');
